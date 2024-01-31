@@ -19,7 +19,7 @@ The command *$ cd lecture1* was used to change the working directory from */home
 
 **command with a path to a file as an argument**
 
-The command *$ cd /home/lecture1/messages/en-us.txt* was used to change the working directory from */home/lecture1* to the *en-us.txt* text file. This resulted in an error message stating that the provided argument is not a valid directory that can be used as a working directory.
+The command *$ cd /home/lecture1/messages/en-us.txt* was used to change the working directory from */home/lecture1* to the *en-us.txt* text file. This resulted in an error message stating that the provided argument is not a valid directory that can be used as a working directory. The working directory remained the same.
 
 ## 2. ls
 
@@ -28,15 +28,15 @@ Screenshot:
 
 **command with no arguments**
 
-The command *$ cd* was used and no output was given. No error message was given. The working directory was */home*. There was no output because the command *cd* changes the working directory. Therefore, a path to a directory must be provided to change to. With no valid argument, the working directory remains the same.
+The command *$ ls* gave the output *lecture1*, the folder in the current path. The working directory was */home* and no errors were given.
 
 **command with a path to a directory as an argument**
 
-The command *$ cd lecture1* was used to change the working directory from */home* to */home/lecture1*. There was no output but we can see from the next line *[user@sahara ~/lecture1]* that the working directory was properly changed. There was no error.
+The command *$ ls /home/lecture1* was used with the output *Hello.class Hello.java messages README workthru.txt*, listing the files and folders within the directory the given path led to. The working directory remained */home* and there was no error.
 
 **command with a path to a file as an argument**
 
-The command *$ cd /home/lecture1/messages/en-us.txt* was used to change the working directory from */home/lecture1* to the *en-us.txt* text file. This resulted in an error message stating that the provided argument is not a valid directory that can be used as a working directory.
+The command *$ ls /home/lecture1/messages/en-us.txt* was used to list any files or folders of the given path. Since the path led to a text file, the output simply stated the path itself as there were no files or folders within. The working directory remained */home* and there was no error.
 
 ## 3. cat
 
