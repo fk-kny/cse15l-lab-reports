@@ -93,11 +93,17 @@ class ChatServer {
 ## Part 2
 Using the command line, show with ls and take screenshots of:
 
-![]()
-* The absolute path to the private key for your SSH key for logging into ieng6 (on your computer, an EdStem workspace, or on the home directory of the lab computer)
-![]()
-* The absolute path to the public key for your SSH key for logging into ieng6 (this is the one you copied to your account on ieng6, so it should be a path on ieng6's file system)
-![]()
+<img width="550" alt="Screen Shot 2024-02-13 at 11 06 52 PM" src="https://github.com/fk-kny/cse15l-lab-reports/assets/158122319/a8ea66a3-520b-4590-a6aa-e7817eea38dc">
+* The absolute path to the **private key** for your SSH key for logging into ieng6 (on your computer, an EdStem workspace, or on the home directory of the lab computer)
+
+PATH: /Users/flora2.kang/.ssh/id_rsa
+
+<img width="717" alt="Screen Shot 2024-01-25 at 1 32 00 PM" src="https://github.com/fk-kny/cse15l-lab-reports/assets/158122319/2ac5b2d5-6022-4a1b-9ff6-a819fae8082e">
+* The absolute path to the **public key** for your SSH key for logging into ieng6 (this is the one you copied to your account on ieng6, so it should be a path on ieng6's file system)
+
+PATH: /Users/flora2.kang/.ssh/id_rsa.pub
+
+<img width="744" alt="Screen Shot 2024-02-13 at 11 12 19 PM" src="https://github.com/fk-kny/cse15l-lab-reports/assets/158122319/69bacead-3c8c-4367-9ca3-eda6fd8723ff">
 * A terminal interaction where you log into your ieng6 account without being asked for a password.
 
 ## Part3
