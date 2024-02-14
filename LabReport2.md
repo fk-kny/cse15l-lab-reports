@@ -87,8 +87,7 @@ class ChatServer {
     * from `user[]`, we take "user2" and ": ", then add those two Strings to our field `message`
     * then, from `text[]`, we take "hi :) " and add it to our field `message`
       this gives us "user2: hi+:)+"
-
-          Note: we get the "+" because some browsers show the space as %20 and a special character replacing the spaces (not important as of now)
+    * Note: we get the "+" because some browsers show the space as %20 and a special character replacing the spaces (not important as of now)
 
 ## Part 2
 Using the command line, show with ls and take screenshots of:
