@@ -1,9 +1,12 @@
 # CSE 15L Lab Report 2
-## Serveers and SSH Keys
-### Flora Kang
 
-**Part 1**
-ChatServer code:
+Servers and SSH Keys
+
+Flora Kang
+
+## Part 1
+
+**ChatServer code:**
 ```
 import java.io.IOException;
 import java.net.URI;
@@ -44,21 +47,52 @@ class ChatServer {
     }
 }
 ```
+*assume that the s= parameter always comes before the user= parameter, and they are always separated by an &*
 
-Examples using `/add-message`
+**Examples using `/add-message`**
 
-1. <img width="1167" alt="Screen Shot 2024-02-13 at 10 03 20 PM" src="https://github.com/fk-kny/cse15l-lab-reports/assets/158122319/c61cc420-69c9-4254-ac4d-280688c41b0a">
-
-* Which methods in your code are called?
-* What are the relevant arguments to those methods, and the values of any relevant fields of the class?
-* How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
-2. <img width="1166" alt="Screen Shot 2024-02-13 at 10 03 44 PM" src="https://github.com/fk-kny/cse15l-lab-reports/assets/158122319/3fa36ef7-ce68-435b-9eba-aaf96824b9ee">
+1. /add-message?s=helloo&user=user1
+   <img width="1167" alt="Screen Shot 2024-02-13 at 10 03 20 PM" src="https://github.com/fk-kny/cse15l-lab-reports/assets/158122319/c61cc420-69c9-4254-ac4d-280688c41b0a">
 
 * Which methods in your code are called?
+    * The method `public String handleRequest(URI url)` is called, checking the path of the incoming URI
+    * The method Server.start() is called
+        * this creates a new instance of `Server` and calls the start method of that class, passing a port number and an instance of `Handler`, in which we have coded our behavior for this server
 * What are the relevant arguments to those methods, and the values of any relevant fields of the class?
+    * The method `public String handleRequest(URI url)` takes a new `URI` `url` as the argument.
+    * The class `Handler` also has the field of type String called `message` that starts as an empty String "".
 * How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
+    * As our code runs, the query is split into a String array containing "s=helloo" and "user=user1". These are each split by "=", giving us two String arrays:
+          `user[]`, containing "user" and "user1"
+          `text[]`, containing "s" and "helloo"
+      from `user[]`, we take "user1" and ": ", then add those two Strings to our field `message`
+      from `text[]`, we take "helloo" and a new line ("\n"), then add those to our field `message`
+      this gives us "user1: helloo"
 
-**Part 2**
+2. /add-message?s=hi :) &user=user2
+    <img width="1166" alt="Screen Shot 2024-02-13 at 10 03 44 PM" src="https://github.com/fk-kny/cse15l-lab-reports/assets/158122319/3fa36ef7-ce68-435b-9eba-aaf96824b9ee">
+
+* Which methods in your code are called?
+    * The method `public String handleRequest(URI url)` is called, checking the path of the incoming URI
+    * The method Server.start() is called
+        * this creates a new instance of `Server` and calls the start method of that class, passing a port number and an instance of `Handler`, in which we have coded our behavior for this server
+* What are the relevant arguments to those methods, and the values of any relevant fields of the class?
+    * The method `public String handleRequest(URI url)` takes a new `URI` `url` as the argument.
+    * The class `Handler` also has the field of type String called `message` that starts as an empty String "".
+* How do the values of any relevant fields of the class change from this specific request? If no values got changed, explain why.
+    * As our code runs, the query is split into a String array containing "s=helloo" and "user=user1". These are each split by "=", giving us two String arrays:
+        * `user[]`, containing "user" and "user2"
+        * `text[]`, containing "s" and "hi :) "
+     
+    * from `user[]`, we take "user2" and ": ", then add those two Strings to our field `message`
+    * then, from `text[]`, we take "hi :) " and add it to our field `message`
+      this gives us "user2: hi+:)+"
+
+          Note: we get the "+" because some browsers show the space as %20 and a special character replacing the spaces (not important as of now)
+
+## Part 2
+Using the command line, show with ls and take screenshots of:
+
 ![]()
 * The absolute path to the private key for your SSH key for logging into ieng6 (on your computer, an EdStem workspace, or on the home directory of the lab computer)
 ![]()
@@ -66,8 +100,8 @@ Examples using `/add-message`
 ![]()
 * A terminal interaction where you log into your ieng6 account without being asked for a password.
 
-**Part3**
-In a couple of sentences, describe something you learned from lab in week 2 or 3 that you didn't know before:
+## Part3
+
 Before these two weeks, I did not know anything about web servers and coding a website, so all of the material and skills were brand new to me!
 Previously, I only knew about coding within an application such as edStem workspaces, VSCode, Eclipse, etc, and had wanted to know how websites that everyday people use were created.
 I learned what the parts of a URL mean and how I can navigate a site using those ideas.
