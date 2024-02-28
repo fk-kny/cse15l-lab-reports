@@ -189,22 +189,41 @@ To fix the bug, I had to edit the body of the for loop so that instead of assign
 
 Then, I made sure to return `newArray` , not the input array.
 
-### Part 2 - Researching Commands
+## Part 2 - Researching Commands
 
 Command: `grep`
 
 4 Command-line Options:
 
-1. 
-2. 
-3. 
-4. 
+1. grep -r “pettern” <directory> : recursively searches all files under current directory
+    1. grep -r 1468
+    2. grep -r Introduction (screenshot cropped for length)
+    
+    ![Screen Shot 2024-02-27 at 10.32.47 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/b2d8cd9a-00a8-478f-94bd-3418ffefafff/849bb07b-99eb-4292-83d0-13cecdfac2ed/Screen_Shot_2024-02-27_at_10.32.47_PM.png)
+    
+2. grep -c “pattern” <file>: display count of lines that match te pattern
+    1. grep -c For technical/911report/chapter-1.txt
+    2. grep -c for technical/911report/chapter-1.txt
+        
+        ![Screen Shot 2024-02-27 at 10.41.37 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/b2d8cd9a-00a8-478f-94bd-3418ffefafff/4d074889-13c6-4bd7-8bec-b041b0afc1d6/Screen_Shot_2024-02-27_at_10.41.37_PM.png)
+        
+3. grep -i “pattern” <file>: find the pattern within the file ignoring cases
+    1. grep -i 'WE HAVE SOME PLANES' 911report/chapter-1.txt
+    2. grep -i 'we have some planes' 911report/chapter-1.txt (to check cases)
+        
+        ![Screen Shot 2024-02-27 at 10.51.19 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/b2d8cd9a-00a8-478f-94bd-3418ffefafff/f77ef78f-dc3a-4b4e-aff2-2dbe2a46e511/Screen_Shot_2024-02-27_at_10.51.19_PM.png)
+        
+        ![Screen Shot 2024-02-27 at 10.51.37 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/b2d8cd9a-00a8-478f-94bd-3418ffefafff/547e7d9c-7739-4361-b5f6-d268b18624cd/Screen_Shot_2024-02-27_at_10.51.37_PM.png)
+        
+4. grep -n : display matched lines and line numbers
+    1. grep -n "WE HAVE SOME PLANES" technical/911report/chapter-1.txt
+    2. grep -n "we have some planes" technical/911report/chapter-1.txt
+    
+    ![Screen Shot 2024-02-27 at 10.45.54 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/b2d8cd9a-00a8-478f-94bd-3418ffefafff/56b27f3a-92d1-4718-979f-58ecea7e9046/Screen_Shot_2024-02-27_at_10.45.54_PM.png)
+    
 
-Consider the commands less, find, and grep. Choose one of them. Online, find 4 interesting command-line options or alternate ways to use the command you chose. To find information about the commands, a simple Web search like “find command-line options” will probably give decent results. There is also a built-in command on many systems called man (short for “manual”) that displays information about commands; you can use man grep, for example, to see a long listing of information about how grep works. Also consider asking ChatGPT!
+Citations:
 
-For example, we saw the -name option for find in class. For each of those options, give 2 examples of using it on files and directories from ./technical. Show each example as a code block that shows the command and its output, and write a sentence or two about what it’s doing and why it’s useful.
+https://linuxcommand.org/lc3_man_pages/grep1.html
 
-That makes 8 total examples, all focused on a single command. There should be two examples each for four different command-line options. Many commands like these have pretty sophisticated behavior possible – it can take years to be exposed to and learn all of the possible tricks and inner workings.
-
-Along with each option/mode you show, cite your source for how you found out about it as a URL or a description of where you found it. See the syllabus on Academic Integrity and how to cite sources like ChatGPT for this class.
-
+https://www.geeksforgeeks.org/grep-command-in-unixlinux/
