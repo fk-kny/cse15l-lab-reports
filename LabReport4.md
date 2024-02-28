@@ -1,4 +1,6 @@
-# Lab Report 4: Vim
+# CSE 15L Lab Report 4
+Vim
+
 Flora Kang
 
 ### Workthrough with Screenshots
