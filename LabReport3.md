@@ -198,29 +198,29 @@ Command: `grep`
 1. grep -r “pettern” <directory> : recursively searches all files under current directory
     1. grep -r 1468
     2. grep -r Introduction (screenshot cropped for length)
-    
-    ![Screen Shot 2024-02-27 at 10.32.47 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/b2d8cd9a-00a8-478f-94bd-3418ffefafff/849bb07b-99eb-4292-83d0-13cecdfac2ed/Screen_Shot_2024-02-27_at_10.32.47_PM.png)
+  
+    <img width="795" alt="Screen Shot 2024-02-27 at 10 32 47 PM" src="https://github.com/fk-kny/cse15l-lab-reports/assets/158122319/08bc4685-26b8-4b6e-a48c-d141e7892c7f">
     
 2. grep -c “pattern” <file>: display count of lines that match te pattern
     1. grep -c For technical/911report/chapter-1.txt
     2. grep -c for technical/911report/chapter-1.txt
-        
-        ![Screen Shot 2024-02-27 at 10.41.37 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/b2d8cd9a-00a8-478f-94bd-3418ffefafff/4d074889-13c6-4bd7-8bec-b041b0afc1d6/Screen_Shot_2024-02-27_at_10.41.37_PM.png)
-        
+       
+   <img width="730" alt="Screen Shot 2024-02-27 at 10 41 37 PM" src="https://github.com/fk-kny/cse15l-lab-reports/assets/158122319/6d44304f-16fd-4f88-a0c7-29436a4c7e46">
+
 3. grep -i “pattern” <file>: find the pattern within the file ignoring cases
     1. grep -i 'WE HAVE SOME PLANES' 911report/chapter-1.txt
     2. grep -i 'we have some planes' 911report/chapter-1.txt (to check cases)
         
-        ![Screen Shot 2024-02-27 at 10.51.19 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/b2d8cd9a-00a8-478f-94bd-3418ffefafff/f77ef78f-dc3a-4b4e-aff2-2dbe2a46e511/Screen_Shot_2024-02-27_at_10.51.19_PM.png)
-        
-        ![Screen Shot 2024-02-27 at 10.51.37 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/b2d8cd9a-00a8-478f-94bd-3418ffefafff/547e7d9c-7739-4361-b5f6-d268b18624cd/Screen_Shot_2024-02-27_at_10.51.37_PM.png)
-        
+        <img width="794" alt="Screen Shot 2024-02-27 at 10 51 19 PM" src="https://github.com/fk-kny/cse15l-lab-reports/assets/158122319/a298111a-68bf-41fe-9dd0-dedfb74132b9">
+
+        <img width="789" alt="Screen Shot 2024-02-27 at 10 51 37 PM" src="https://github.com/fk-kny/cse15l-lab-reports/assets/158122319/b0017712-d246-4882-8f3b-1f5043687484">
+
 4. grep -n : display matched lines and line numbers
     1. grep -n "WE HAVE SOME PLANES" technical/911report/chapter-1.txt
     2. grep -n "we have some planes" technical/911report/chapter-1.txt
     
-    ![Screen Shot 2024-02-27 at 10.45.54 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/b2d8cd9a-00a8-478f-94bd-3418ffefafff/56b27f3a-92d1-4718-979f-58ecea7e9046/Screen_Shot_2024-02-27_at_10.45.54_PM.png)
-    
+   <img width="795" alt="Screen Shot 2024-02-27 at 10 45 54 PM" src="https://github.com/fk-kny/cse15l-lab-reports/assets/158122319/9492b48f-37c3-484c-aa94-338d03252f31">
+
 
 Citations:
 
