@@ -27,8 +27,8 @@ do
   # Replace this with a condition that does the appropriate check
   if [[ $? -ne 0 ]] # line 11
   then
-    echo "$submission_dir: Compile error" > result.txt    
-    continue
+    echo "$submission_dir: Compile error" > result.txt # line 13    
+    continue # line 14
   else # line 15
     echo "Compile successful for $submission_dir"
   fi
@@ -174,6 +174,9 @@ find: ‘submissions’: No such file or directory
 I realize now that in the iterations when Sorter.java fails to compile, the if statement evaluates as true and within this block, I have `continue` which tells the program to exit the current iteration and skip to the next. This was an issue because we have our code changing the working directory back to the original directory later on within the for loop. Consequently, the working directory stays at the `submission_dir` it was assigned at the beginning of the loop and at the next iteration, line 6 searches for the next submissions/* but fails to find the proper next directory.
 
 This bug can be easily fixed by adding a line of code within the if block to reassign the working directory to the original directory, which we conveniently have saved as `original_dir`
+
+Here is the line to insert `cd $original_dir` in between lines 13 and 14.
+After fixing this, my code ran correctly.
 
 ## Part 2 - Reflection
 
