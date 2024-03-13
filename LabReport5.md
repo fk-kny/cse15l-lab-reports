@@ -12,7 +12,7 @@ Here is my code so far and the resulting output
 
 (important lines labeled for reference)
 
-`grade.h`
+`grade.sh`
 
 ```bash
 original_dir=`pwd` # line 1
