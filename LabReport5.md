@@ -176,6 +176,7 @@ I realize now that in the iterations when Sorter.java fails to compile, the if s
 This bug can be easily fixed by adding a line of code within the if block to reassign the working directory to the original directory, which we conveniently have saved as `original_dir`
 
 Here is the line to insert: `cd $original_dir` in between lines 13 and 14.
+
 After fixing this, my code ran correctly.
 
 ## Part 2 - Reflection
